@@ -1,3 +1,5 @@
+// @ts-ignore
+
 import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
@@ -10,8 +12,7 @@ onResize()
 function onResize() {
   // get actual vh on mobile
   document.body.style.setProperty('--vh', window.innerHeight + 'px')
-}
 
 createApp(App)
   .use(router)
-  .mount('#app');
+  .mount('#app')
