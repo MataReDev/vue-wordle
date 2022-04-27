@@ -12,6 +12,7 @@ onResize()
 function onResize() {
   // get actual vh on mobile
   document.body.style.setProperty('--vh', window.innerHeight + 'px')
+}
 
 createApp(App)
   .use(router)
