@@ -28,7 +28,7 @@
         :key="`tile_${index}`"
         v-for="(tile, index) in row"
         :class="['tile', tile.letter && 'filled', tile.state && 'revealed']">
-        <div class="front" :style="{ transitionDelay: `${index * tileDelay}ms` }">
+        <div class="front" style="color: white" :style="{ transitionDelay: `${index * tileDelay}ms` }">
           {{ tile.letter }}
         </div>
         <div
