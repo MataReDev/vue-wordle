@@ -3,7 +3,7 @@
       <router-link to="/" class="flex-center title">
         <img v-if="!isRoot" src="/back.svg" alt="Go Back" class="back">
         <div v-else class="noAction"></div>
-        <h1>Vue-Sutom</h1>
+        <h1>SUTOBM</h1>
       </router-link>
       <div class="flex-center" id="headerContent"></div>
     </header>
