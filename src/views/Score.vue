@@ -34,17 +34,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="bg-gray-50 text-center">
-                        <td class="p-2 border-r">
-                            <input type="text" class="border p-1">
-                        </td>
-                        <td class="p-2 border-r">
-                            <input type="text" class="border p-1">
-                        </td>
-                        <td class="p-2 border-r">
-                            <input type="text" class="border p-1">
-                        </td>
-                    </tr>
                     <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
                         <td class="p-2 border-r">1</td>
                         <td class="p-2 border-r">John Doe</td>
