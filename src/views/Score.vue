@@ -11,7 +11,9 @@
         </div>
 
         <h1>Leaderboard</h1>
-        <p>Prochainement</p>
+        <div>
+            <p>Prochainement</p>
+        </div>
     </div>
 </template>
 
