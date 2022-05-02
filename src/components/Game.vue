@@ -10,7 +10,7 @@
   </Transition>
 
   <teleport to='#headerContent' >
-    <div class="pad-10">Mode aléatoire</div> <Toggle @isInfinite="changeMode" />
+    <div class="pad-10" style="color: white">Mode aléatoire</div> <Toggle @isInfinite="changeMode" />
     <img src="/reload.png" class="reload" @click="() => resetState(true)">
     <router-link to="/score"><img src="/leader.png" class="leader"></router-link>
   </teleport>
