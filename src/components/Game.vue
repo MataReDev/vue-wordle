@@ -12,7 +12,7 @@
   <teleport to='#headerContent' >
     <div class="pad-10">Mode aléatoire</div> <Toggle @isInfinite="changeMode" />
     <img src="/reload.svg" class="reload" @click="() => resetState(true)">
-    <router-link to="/score"><img src="/leader.svg" class="leader"></router-link>
+    <router-link to="/score"><img src="/leader.png" class="leader"></router-link>
   </teleport>
 
   <div id="board">
