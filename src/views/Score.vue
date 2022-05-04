@@ -23,7 +23,12 @@
                         </th>
                         <th class="p-2 border-r cursor-pointer text-sm font-thin text-gray-500">
                             <div class="flex items-center justify-center">
-                                Name
+                                Nom
+                            </div>
+                        </th>
+                        <th class="p-2 border-r cursor-pointer text-sm font-thin text-gray-500">
+                            <div class="flex items-center justify-center">
+                                Mot d'affilé
                             </div>
                         </th>
                     </tr>
@@ -31,15 +36,18 @@
                     <tbody>
                     <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
                         <td class="p-2 border-r">1</td>
-                        <td class="p-2 border-r">John Doe</td>
+                        <td class="p-2 border-r">MataRed</td>
+                        <td class="p-2 border">132</td>
                     </tr>
                     <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
                         <td class="p-2 border-r">2</td>
-                        <td class="p-2 border-r">Adam Smith</td>
+                        <td class="p-2 border-r">Frost12</td>
+                        <td class="p-2 border-">113</td>
                     </tr>
                     <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
                         <td class="p-2 border-r">3</td>
-                        <td class="p-2 border-r">Jean Doe</td>
+                        <td class="p-2 border-r">Rouquetteteam</td>
+                        <td class="p-2 border-r">95</td>
                     </tr>
                     </tbody>
                 </table>
