@@ -12,8 +12,8 @@
 
         <h1 style="color:gold">Leaderboard</h1>
         <div>
-            <form id="search">
-                Search <input name="query" v-model="searchQuery">
+            <form id="search" style="color: white;justify-content: center;">
+                Search <input name="query" v-model="searchQuery" style="color:black">
             </form>
             <DemoGrid
                 :data="gridData"
