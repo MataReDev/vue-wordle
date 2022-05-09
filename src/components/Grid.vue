@@ -79,7 +79,7 @@ table {
 
 th {
   background-color: gold;
-  color: rgba(255, 255, 255, 0.66);
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   user-select: none;
 }

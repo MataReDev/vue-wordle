@@ -56,11 +56,11 @@ export default {
   data: () => ({
       //Appel d'api pour récuperér le classement
     searchQuery: '',
-    gridColumns: ['Rank','name', 'maximum'],
+    gridColumns: ['Rank','name', 'total'],
     gridData: [
-      { Rank: '1', name: 'MataRed', maximum: 132},
-      { Rank: '2', name: 'Frost12', maximum: 113 },
-      { Rank: '3', name: 'Rouquetteteam', maximum: 93 },
+      { Rank: '1', name: 'MataRed', total: 132},
+      { Rank: '2', name: 'Frost12', total: 113 },
+      { Rank: '3', name: 'Rouquetteteam', total: 93 },
     ]
   })
 }
