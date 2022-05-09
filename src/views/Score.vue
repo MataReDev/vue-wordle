@@ -23,6 +23,18 @@
             </DemoGrid>
         </div>
     </div>
+    <div id="app">
+        <h1>Bitcoin Price Index</h1>
+        <div
+            v-for="currency in info"
+            class="currency"
+        >
+            {{ currency.description }}:
+            <span class="lighten">
+            <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+            </span>
+        </div>
+    </div>
 </template>
 
 <script setup>
@@ -42,6 +54,7 @@ export default {
     DemoGrid
   },
   data: () => ({
+      //Appel d'api pour récuperér le classement
     searchQuery: '',
     gridColumns: ['Rank','name', 'maximum'],
     gridData: [
