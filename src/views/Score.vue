@@ -58,7 +58,7 @@
     </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import ScoreManipulation from "../models/scoreManipulation";
 
 const scoreManipulation = new ScoreManipulation()
@@ -66,9 +66,6 @@ const scoreManipulation = new ScoreManipulation()
 const localResult = scoreManipulation.get();
 const localTotal = $computed(() => scoreManipulation.total);
 
-</script>
-
-<script setup>
 import DemoGrid from "../components/Grid.vue"
 
 export default {
