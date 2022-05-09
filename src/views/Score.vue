@@ -34,21 +34,23 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
-                        <td class="p-2 border-r">1</td>
-                        <td class="p-2 border-r">MataRed</td>
-                        <td class="p-2 border">132</td>
-                    </tr>
-                    <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
-                        <td class="p-2 border-r">2</td>
-                        <td class="p-2 border-r">Frost12</td>
-                        <td class="p-2 border-">113</td>
-                    </tr>
-                    <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
-                        <td class="p-2 border-r">3</td>
-                        <td class="p-2 border-r">Rouquetteteam</td>
-                        <td class="p-2 border-r">95</td>
-                    </tr>
+
+                        <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
+                            <td class="p-2 border-r">1</td>
+                            <td class="p-2 border-r">MataRed</td>
+                            <td class="p-2 border">132</td>
+                        </tr>
+                        <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
+                            <td class="p-2 border-r">2</td>
+                            <td class="p-2 border-r">Frost12</td>
+                            <td class="p-2 border-">113</td>
+                        </tr>
+                        <tr class="bg-gray-100 text-center border-b text-sm text-gray-600">
+                            <td class="p-2 border-r">3</td>
+                            <td class="p-2 border-r">Rouquetteteam</td>
+                            <td class="p-2 border-r">95</td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -63,7 +65,38 @@ const scoreManipulation = new ScoreManipulation()
 
 const localResult = scoreManipulation.get();
 const localTotal = $computed(() => scoreManipulation.total);
+
 </script>
+
+<script setup>
+import DemoGrid from "../components/Grid.vue"
+
+export default {
+  components: {
+    DemoGrid
+  },
+  data: () => ({
+    searchQuery: '',
+    gridColumns: ['Rank','name', 'maximum'],
+    gridData: [
+      { Rank: '1', name: 'MataRed', maximum: 132},
+      { Rank: '2', name: 'Frost12', maximum: 113 },
+      { Rank: '3', name: 'Rouquetteteam', maximum: 93 },
+    ]
+  })
+}
+</script>
+
+<template>
+  <form id="search">
+    Search <input name="query" v-model="searchQuery">
+  </form>
+  <DemoGrid
+    :data="gridData"
+    :columns="gridColumns"
+    :filter-key="searchQuery">
+  </DemoGrid>
+</template>
 
 <style scoped>
 .root{
