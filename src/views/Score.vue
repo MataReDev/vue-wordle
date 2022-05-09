@@ -12,9 +12,10 @@
 
         <h1 style="color:gold">Leaderboard</h1>
         <div>
-            <form id="search" style="color: white;justify-content: center;">
+            <form id="search" style="color: white;">
                 Search <input name="query" v-model="searchQuery" style="color:black">
             </form>
+            <br>
             <DemoGrid
                 :data="gridData"
                 :columns="gridColumns"
