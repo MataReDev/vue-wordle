@@ -33,6 +33,7 @@ const scoreManipulation = new ScoreManipulation()
 const localResult = scoreManipulation.get();
 const localTotal = $computed(() => scoreManipulation.total);
 </script>
+
 <script>
 import DemoGrid from "../components/Grid.vue"
 
