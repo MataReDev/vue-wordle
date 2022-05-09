@@ -36,10 +36,6 @@
         </div>
     </div>
     
-    <div id="app2" style="color:white">
-    {{ info }}
-    </div>
-
 </template>
 
 <script setup>
@@ -49,20 +45,6 @@ const scoreManipulation = new ScoreManipulation()
 
 const localResult = scoreManipulation.get();
 const localTotal = $computed(() => scoreManipulation.total);
-
-{
-  el: '#app2',
-  data () {
-    return {
-      info: null
-    }
-  },
-  mounted () {
-    axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
-  }
-}
 </script>
 
 <script>
