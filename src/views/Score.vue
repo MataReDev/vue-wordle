@@ -48,11 +48,8 @@ export default {
       //Appel d'api pour récuperér le classement
     searchQuery: '',
     gridColumns: ['rank','name', 'total'],
-    gridData: players
+    gridData: axios.get('https://192.168.42.12/api/playerGetAll.php'),
   }),
-    axios
-    .get('https://192.168.42.12/api/playerGetAll.php')
-    .then(response => (this.players = response.data.bpi)),
 }
 </script>
 
