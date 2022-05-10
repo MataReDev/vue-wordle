@@ -13,8 +13,6 @@
     <div class="pad-10" style="color: white">Mode aléatoire</div> <Toggle @isInfinite="changeMode" />
     <img src="/reload.png" class="reload" @click="() => resetState(true)">
     <router-link to="/score"><img src="/leader.png" class="leader"></router-link>
-    <input v-model="message" placeholder="modifiez-moi">
-    <p>Votre pseudo : {{ message }}</p>
   </teleport>
 
   <div id="board">
