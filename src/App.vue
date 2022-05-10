@@ -7,7 +7,7 @@
       </router-link>
       <div class="flex-center" id="headerContent"></div>
     </header>
-    <router-view />
+    <router-view /> 
 </template>
 
 <script lang="ts" setup>
