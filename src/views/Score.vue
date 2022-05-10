@@ -37,6 +37,7 @@ const localTotal = $computed(() => scoreManipulation.total);
 
 <script>
 import DemoGrid from "../components/Grid.vue"
+import axios from 'axios';
 
 axios
   .get('http://192.168.42.12/api/playerGetAll.php')
