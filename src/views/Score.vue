@@ -39,9 +39,6 @@ const localTotal = $computed(() => scoreManipulation.total);
 import DemoGrid from "../components/Grid.vue"
 import axios from 'axios';
 
-axios
-  .get('http://192.168.42.12/api/playerGetAll.php')
-  .then(response => (this.players = response.data.bpi))
 
 export default {
   components: {
@@ -52,7 +49,10 @@ export default {
     searchQuery: '',
     gridColumns: ['rank','name', 'total'],
     gridData: players
-  })
+  }),
+    axios
+    .get('http://192.168.42.12/api/playerGetAll.php')
+    .then(response => (this.players = response.data.bpi))
 }
 </script>
 
