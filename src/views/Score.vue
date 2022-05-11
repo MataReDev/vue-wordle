@@ -49,8 +49,14 @@ export default {
     searchQuery: '',
     gridColumns: ['rank','name', 'total'],
     //gridData: [{"rank":1,"0":1,"name":"MataRed","1":"MataRed","total":132,"2":132},{"rank":2,"0":2,"name":"Frost12","1":"Frost12","total":113,"2":113},{"rank":3,"0":3,"name":"Rouquetteteam","1":"Rouquetteteam","total":89,"2":89},{"rank":4,"0":4,"name":"KxKashi","1":"KxKashi","total":37,"2":37},{"rank":5,"0":5,"name":"Faouzi x Whintali","1":"Faouzi x Whintali","total":25,"2":25},{"rank":6,"0":6,"name":"CubbStar","1":"CubbStar","total":20,"2":20},{"rank":7,"0":7,"name":"dydybaba7","1":"dydybaba7","total":19,"2":19},{"rank":8,"0":8,"name":"p'tit xenon","1":"p'tit xenon","total":19,"2":19},{"rank":9,"0":9,"name":"Erpriex","1":"Erpriex","total":15,"2":15},{"rank":10,"0":10,"name":"HugoBretzel","1":"HugoBretzel","total":13,"2":13}],
-    gridData: axios.get('https://192.168.42.12/api/playerGetAll.php').data
+    gridData: []
   }),
+  mounted: () => {
+       axios.get('https://192.168.42.12/api/playerGetAll.php').then((data)=>{
+           this.gridData = data
+       }
+       )
+  }
 }
 </script>
 
