@@ -15,6 +15,10 @@
     <router-link to="/score"><img src="/leader.png" class="leader"></router-link>
   </teleport>
 
+
+    <p style="color:white;text-align: center;">Pseudo : {{ username }}</p>
+  
+  
   <div id="board">
     <div
       :key="`row_${index}`"
@@ -54,6 +58,7 @@ import {icons, LetterState, LocalStorageKey, Score} from '../models/types'
 import Toggle from './Toggle.vue';
 import {LocalStorageManipulation} from "../models/localStorageManipulation";
 import ScoreManipulation from "../models/scoreManipulation";
+import axios from 'axios';
 
 const wordsManipulation = new WordsManipulation()
 const localStorageManipulation = new LocalStorageManipulation()
@@ -61,7 +66,7 @@ const scoreManipulation = new ScoreManipulation()
 
 // Get word of the day
 let answer = $ref('')
-let defLink = $computed(() => `https://fr.wiktionary.org/wiki/${answer}`)
+let defLink = $computed(() => `https://fr.wikipedia.org/wiki/${answer}`)
 
 let tileDelay = $computed(() => {
   if(answer.length == 5){
@@ -88,6 +93,7 @@ const isEmptyRow = $computed(() => currentRow.findIndex((it:any) => !it.letter) 
 
 // Feedback state: message and shake
 let message = $ref('')
+let username = $ref('MataRed')
 let grid = $ref('')
 let shakeRowIndex = $ref(-1)
 let success = $ref(false)
@@ -118,6 +124,7 @@ function resetState(force: boolean = false){
   currentRowIndex = board.findIndex((it: any) => it[1].letter == '') // Find the first row with empty word since we resume the state
   message = ""
   grid = ""
+  username = new String(localStorage.getItem('username')).toString();
   shakeRowIndex = -1
   success = false
   letterStates = {}
@@ -262,6 +269,7 @@ function completeRow() {
           -1
         )
         success = true
+        axios.get("https://192.168.42.12/api/playerAddGame.php",{ params: { username: username } } )
       }, 1600)
     } else if (currentRowIndex < board.length - 1) {
       // go the next row
